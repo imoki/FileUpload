@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>share</title>
+</head>
+<body>
+<!--文本-->
+<form action="uploadtxt.php" name = 'frmTxt' method = 'post'>
+	<textarea cols = '50',rows = '80' name = 'content'></textarea>
+	<input type = 'submit' name = 'submit' value = '提交文本' />
+</form>
+<br>
+<!--多文件同时上传-->
+<!-- 上传文件夹-->
+<form action="uploadfile.php" method="post" enctype="multipart/form-data">
+	<label for="file">文件名：</label>
+	<input name="upload[]" type="file" multiple="multiple" webkitdirectory/>
+	<input type="submit" value="提交文件">
+</form>
+<!--
+<form action="uploadfile.php" method="post" enctype="multipart/form-data">
+	<label for="file">文件名：</label>
+	<input type="file" name="file" id="file">
+	<input type="submit" name="submit" value="提交文件">
+</form>
+-->
+</body>
+</html>
